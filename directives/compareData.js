@@ -13,14 +13,14 @@ angular.module('jz-validators', []).directive('compareData', [function () {
 
             ctrl.$parsers.push(function (value) {
                 if (value === cpWidget.$viewValue) {
-                    ctrl.$setValidity('compare', true);
+                    ctrl.$setValidity('compareData', true);
                     return value;
                 }
-                ctrl.$setValidity('compare', false);
+                ctrl.$setValidity('compareData', false);
             });
 
             cpWidget.$parsers.push(function (value) {
-                ctrl.$setValidity('compare', value === ctrl.$viewValue);
+                ctrl.$setValidity('compareData', value === ctrl.$viewValue);
                 return value;
             });
         }
