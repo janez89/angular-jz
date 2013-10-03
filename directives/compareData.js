@@ -9,7 +9,7 @@ angular.module('jz-validators', []).directive('compareData', [function () {
     return {
         require: 'ngModel',
         link: function (scope, elm, attr, ctrl) {
-            var cpWidget = elm.inheritedData('$formController')[attr.compareValidator];
+            var cpWidget = elm.inheritedData('$formController')[attr.compareData];
 
             ctrl.$parsers.push(function (value) {
                 if (value === cpWidget.$viewValue) {
